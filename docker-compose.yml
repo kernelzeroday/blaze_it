@@ -1,0 +1,15 @@
+#we use the dockerfile to build the image and then run the container
+# dockerfile location is BlazorApp/Dockerfile
+# docker image name is blazorapp
+# docker container name is blazorapp
+# docker container port is 5000
+
+version: 'version 3.7'
+services:
+  blazorapp:
+    build: ./BlazorApp
+    container_name: blazorapp
+    ports:
+      - 5000:80
+    restart: always
+
